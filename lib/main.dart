@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/models/counter_model.dart';
 import 'package:flutter_app/views/home.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 
@@ -12,8 +11,7 @@ void main() {
   ));
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => CounterModel(),
+    ProviderScope(
       child: MaterialApp(
           title: 'Flutter Playground',
           home: const HomePage(),

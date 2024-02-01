@@ -1,0 +1,1 @@
+const String randomNameGeneratorBaseURL = 'https://api.name-fake.com';
